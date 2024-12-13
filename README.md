@@ -1,5 +1,5 @@
-# Dialectical Strategies
-A Dialectical Strategy is like a "plug-in" for Epistemic Me that helps prompt users to examine their beliefs within a specific framework or approach to understanding them. It enables coaches and health practioners to focus on clarifying the philosophy they want to use to help their patients and coachees achieve real outcomes - rather than the technology that might enable that change.
+# Dialectic Strategies
+A Dialectic Strategy is like a "plug-in" for Epistemic Me that helps prompt users to examine their beliefs within a specific framework or approach to understanding them. It enables coaches and health practioners to focus on clarifying the philosophy they want to use to help their patients and coachees achieve real outcomes - rather than the technology that might enable that change.
 
 *Any* practioner can easily to write a dialectic strategy for Epistemic Me. However, Dialectic Strategies can also be used for more advanced professional use cases.
 
@@ -7,7 +7,7 @@ As an example, imagine a Functional Health practioner writing Dialectic Strategy
 
 Practioners can also upload their own existing writing, Youtube Videos, or public facing work, and have Epistemic Me generate a "Dialectic Strategy" automatically using a the concept of a "Meta Strategy": a writing that extracts the Epistemic Context from a piece of work and writes a Dialectic Strategy that can be tweaked for Epistemic Me. 
 
-## How To Add Your Own Dialectical Strategy
+## How To Add Your Own Dialectic Strategy
 
 To add your own Dialectic Strategy, simplify add new strategy in a markdown file and keep it in the `strategies/` folder. We suggest taking a look at existing examples, and reading through the "MetaStrategy.md" to get a sense for what makes a Dialectic Strategy that works well with Epistemic Me. 
 
