@@ -4,6 +4,8 @@ A Philosophy is like a "plug-in" for Epistemic Me that provides a philsophical c
 
 It enables coaches and health practioners to focus on clarifying the philosophy they want to use to help their patients and coachees achieve real outcomes - rather than the technology that might enable that change.
 
+## All Philosophers Welcome
+
 *Any* practioner can easily to write a philosophy for Epistemic Me. However, Philosophies can also be written for more advanced professional use cases.
 
 As an example, imagine a Functional Health practioner writing philosophy within Epistemic Me. A good philosophy, once plugged into the tool, would systematically help users clarify their health beliefs by applying the philosophy of Functional Medicine. Through reflective prompts, such as "What patterns do you observe between your symptoms and daily habits?" or "How do specific stressors or foods impact your energy levels?" it would guide users to identify underlying relationships between their lifestyle and well-being. By mimicking the structured approach of a Functional Medicine practitioner, this strategy would enable users to generate insights and hypotheses about their health in a systematic, belief-driven way—empowering them to take actionable steps consistent with Functional Medicine principles.
