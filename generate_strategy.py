@@ -17,31 +17,17 @@ def read_text_file(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
         return file.read()
 
-# Function to paginate large text
-def paginate_text(text, max_length=4000):
-    paragraphs = text.split("\n")
-    pages = []
-    current_page = ""
-    for paragraph in paragraphs:
-        if len(current_page) + len(paragraph) + 1 > max_length:
-            pages.append(current_page)
-            current_page = ""
-        current_page += paragraph + "\n"
-    if current_page:
-        pages.append(current_page)
-    return pages
-
 # Function to generate a dialectic strategy using OpenAI
-def generate_dialectic_strategy(meta_prompt, content):
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+def generate_dialectic_strategy(client, meta_prompt, content):
+    chat_completion = client.chat.completions.create(
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": meta_prompt},
-            {"role": "user", "content": content},
-        ]
+            {"role": "user", "content": content}
+        ],
+        model="gpt-4",
     )
-    return response['choices'][0]['message']['content']
+    return chat_completion.choices[0].message.content
 
 # CLI menu system for dynamic interaction
 def interactive_menu():
@@ -73,9 +59,6 @@ def interactive_menu():
 
 # Main function to process the file and generate a markdown file
 def main(file_path, api_key, meta_file="MetaStrategy.md"):
-    # Set OpenAI API key
-    openai.api_key = api_key
-
     # Extract content from the file
     if file_path.endswith(".pdf"):
         content = extract_text_from_pdf(file_path)
@@ -84,27 +67,21 @@ def main(file_path, api_key, meta_file="MetaStrategy.md"):
     else:
         raise ValueError("Unsupported file type. Please provide a PDF or TXT file.")
 
-    # Paginate the content for large files
-    pages = paginate_text(content)
-
     # Read the meta strategy from the specified file
     if not os.path.exists(meta_file):
         raise FileNotFoundError(f"Meta strategy file '{meta_file}' not found.")
     with open(meta_file, "r", encoding="utf-8") as meta:
         meta_prompt = meta.read()
 
-    # Generate the dialectic strategy for each page and aggregate the results
-    full_strategy = ""
-    for i, page in enumerate(pages):
-        print(f"Processing page {i + 1}/{len(pages)}...")
-        strategy = generate_dialectic_strategy(meta_prompt, page)
-        full_strategy += strategy + "\n\n"
+    # Generate the dialectic strategy in a single call
+    print("Generating strategy...")
+    strategy = generate_dialectic_strategy(openai.OpenAI(api_key=api_key), meta_prompt, content)
 
     # Save the result to a markdown file
     base_name = os.path.splitext(os.path.basename(file_path))[0]
     output_file = f"{base_name}_dialectic_strategy.md"
     with open(output_file, "w", encoding="utf-8") as file:
-        file.write(full_strategy)
+        file.write(strategy)
 
     print(f"Dialectic strategy saved to {output_file}")
 
