@@ -1,0 +1,26 @@
+{
+    "selfs" : [
+        {
+            "id" : "1",
+            "name" : "Robert Ta"
+        },
+        {
+            "id" : "2",
+            "name" : "Bryan Johnson"
+        }
+    ],
+    "resources" : [
+        {
+            "self_model": "1",
+            "file": "RespondAndDontReact.txt"
+        },
+        {
+            "self_model": "2",
+            "file": "BuildingDon'tDieGlobally.txt"
+        },
+        {
+            "self_model": "2",
+            "file": "DontDieDinnerGuide.txt"
+        }
+    ]
+}
