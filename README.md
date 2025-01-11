@@ -4,6 +4,8 @@ A Philosophy is like a "plug-in" for Epistemic Me that provides a philsophical c
 
 It enables coaches and health practioners to focus on clarifying the philosophy they want to use to help their patients and coachees achieve real outcomes - rather than the technology that might enable that change.
 
+Our current strategy is to use philosophies as a way to boostrap models of self of coaches and influencers we want on the Epistemic Me platform. This may change in the future as we move more processing to the backend.
+
 ## All Philosophers Welcome
 
 *Any* practioner can easily to write a philosophy for Epistemic Me. However, Philosophies can also be written for more advanced professional use cases.
@@ -14,7 +16,7 @@ Practioners can also upload their own existing writing (soon podcasts and Youtub
 
 ## How To Add Your Own Philosophy
 
-To add your own philosophy, simplify add new strategy in a markdown file and keep it in the `strategies/` folder. We suggest taking a look at existing examples, and reading through the "MetaStrategy.md" to get a sense for what makes a philosophy that works well with Epistemic Me. 
+To add your own philosophy, simplify add new strategy in a markdown file and keep it in the `philosophies/` folder. We suggest taking a look at existing examples, and reading through the "MetaStrategy.md" to get a sense for what makes a philosophy that works well with Epistemic Me. 
 
 You can also generate dialectic strategies dynamically through the Epistemic Me CLI.
 
