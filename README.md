@@ -1,4 +1,4 @@
-# Philsophies
+# Philosophies
 
 A Philosophy is like a "plug-in" for Epistemic Me that provides a philsophical context in which users can start to clarify their beliefs.
 
